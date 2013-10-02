@@ -1,0 +1,20 @@
+<head>
+  <title>MeteorOscController</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>OSC</h1>
+  <div id="button_panel1">
+  {{#each buttons}}
+    {{>osc_button }}
+  {{/each}}
+  </div>
+</template>
+
+<template name="osc_button">
+  <div data-osc-path="/button{{button_num}}" class="osc_button span1 {{pressed}}">{{text}}</div>
+</template>

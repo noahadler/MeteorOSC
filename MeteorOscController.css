@@ -1,0 +1,20 @@
+/* CSS declarations go here */
+
+body {
+  color: gold;
+  background-color: black; /*rgb(38,36,30);*/
+}
+
+.osc_button {
+  width: 64px;
+  height: 64px;
+  border: 2px solid gold;
+  background-color: rgba(192,192,192,0.5);
+  margin: 8px;
+  border-radius: 4px;
+  display:inline-block;
+}
+
+.pressed {
+  background-color: gold !important;
+}
