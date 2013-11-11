@@ -6,8 +6,9 @@ body {
 }
 
 .osc_button {
-  width: 64px;
-  height: 64px;
+  /*width: 64px;
+  height: 64px;*/
+  min-height: 12px;
   border: 2px solid gold;
   background-color: rgba(192,192,192,0.5);
   margin: 8px;
@@ -16,5 +17,43 @@ body {
 }
 
 .pressed {
+  color: black;
   background-color: gold !important;
+}
+
+input[type="range"].vHorizon {
+   -webkit-appearance: none;
+   background-color: pink;
+   width: 200px;
+   height:10px;
+}
+input[type="range"].vVertical {
+   -webkit-appearance: slider-vertical;
+   background-color: pink;
+   width: 10px;
+   height:200px;
+}
+input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   background-color: red;
+   width: 20px;
+   height: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 64px;
+  height: 128px;
+  border: 2px solid silver;
+  border-radius: 4px;
+}
+
+.slider-button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid gold;
+  border-radius: 4px;
+  margin-left: 1px;
+  margin-top: 1px;
 }

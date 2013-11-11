@@ -8,5 +8,4 @@ autopublish
 insecure
 preserve-inputs
 coffeescript
-npm
 bootstrap

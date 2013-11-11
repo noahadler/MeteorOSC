@@ -1,20 +1,41 @@
 <head>
   <title>MeteorOscController</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 
 <body>
-  {{> hello}}
+  <div class="container">
+  <h1>OSC</h1>
+  <div class="row">
+    {{> mixer}}
+  </div>
 </body>
 
-<template name="hello">
-  <h1>OSC</h1>
-  <div id="button_panel1">
-  {{#each buttons}}
-    {{>osc_button }}
+<template name="mixer">
+  <div class="span12">
+    <div id="button_play" class="btn">Play!</div>
+    <div id="button_stop" class="btn">Stop</div>
+  </div>
+  {{#each tracks}}
+    <div class="span1 text-center">
+      <div>{{name}}</div>
+      <div><input class="volume-fader vVertical" data-track-num="{{num}}" type="range" min="0" max="100" /></div>
+      <div><button class="btn" name="{{num}}">{{num}}</button></div>
+      <div><button class="btn" value="S" >S</button></div>
+    </div>
   {{/each}}
+</template>
+
+<template name="button_grid">
+
+  <div id="button_panel1" class="row">
+      {{#each buttons}}
+        {{> osc_button }}
+      {{/each}}
   </div>
 </template>
 
 <template name="osc_button">
-  <div data-osc-path="/button{{button_num}}" class="osc_button span1 {{pressed}}">{{text}}</div>
+  <div data-osc-path="/button/{{button_num}}" class="osc_button span1 {{pressed}}">{{text}}</div>
 </template>
